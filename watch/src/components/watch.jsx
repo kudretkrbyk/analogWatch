@@ -16,15 +16,19 @@ export default function Watch() {
 
   return (
     <div className=" flex items-center justify-center relative w-full h-[600px] ">
-      <video
-        className="z-20 absolute   w-full h-[600px] object-cover object-center"
-        src="https://video.wixstatic.com/video/11062b_3e2f37c297534f9ead156265242fbca8/720p/mp4/file.mp4" // Buraya kendi video URL'nizi koyun
-        autoPlay
-        loop
-        muted
-      />
-      <div className="z-40 absolute h-[600px] opacity-40 w-full bg-gray-500"></div>
-      <div className="z-40 absolute h-[600px] w-[600px] flex items-center justify-center">
+      <div className="z-30 w-full h-[600px] fixed">
+        {" "}
+        <video
+          className="z-20 absolute   w-full h-[600px] object-cover object-center"
+          src="https://video.wixstatic.com/video/11062b_3e2f37c297534f9ead156265242fbca8/720p/mp4/file.mp4" // Buraya kendi video URL'nizi koyun
+          autoPlay
+          loop
+          muted
+        />
+        <div className="z-40 absolute h-[600px] opacity-40 w-full bg-gray-500"></div>
+      </div>
+
+      <div className="z-30 absolute h-[600px] w-[600px] flex items-center justify-center">
         {/* Hour hand */}
         <div
           className="absolute w-2 h-[150px] bg-black origin-bottom top-36"
@@ -43,10 +47,17 @@ export default function Watch() {
 
         {/* Hour marks */}
         <div className="absolute w-[600px] h-[600px] flex items-center justify-center">
+          <div className="text-white flex flex-col items-center justify-center gap-5">
+            <div className="text-2xl">YENİ WEB SİTEMİZ</div>
+            <div className="text-8xl text-wrap text-center">
+              ÇOK <br></br> YAKINDA{" "}
+            </div>
+            <div className="text-2xl">TAKİPTE KALIN!</div>
+          </div>
           {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-10 bg-black"
+              className="absolute w-1 h-12 bg-white"
               style={{ transform: `rotate(${i * 30}deg) translateY(-250px)` }}
             ></div>
           ))}
