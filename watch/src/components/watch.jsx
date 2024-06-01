@@ -15,33 +15,33 @@ export default function Watch() {
   const hourDeg = (time.getHours() % 12) * 30 + time.getMinutes() * 0.5;
 
   return (
-    <div className=" flex items-center justify-center relative w-full h-[600px] ">
-      <div className="z-30 w-full h-[600px] fixed">
+    <div className="z-43 flex items-center justify-center relative w-full h-screen ">
+      <div className="z-30 w-full h-screen fixed">
         {" "}
         <video
-          className="z-20 absolute   w-full h-[600px] object-cover object-center"
+          className="z-20 absolute   w-full h-screen object-cover object-center"
           src="https://video.wixstatic.com/video/11062b_3e2f37c297534f9ead156265242fbca8/720p/mp4/file.mp4" // Buraya kendi video URL'nizi koyun
           autoPlay
           loop
           muted
         />
-        <div className="z-40 absolute h-[600px] opacity-40 w-full bg-gray-500"></div>
+        <div className="z-40 absolute h-screen opacity-40 w-full bg-gray-500"></div>
       </div>
 
-      <div className="z-30 absolute h-[600px] w-[600px] flex items-center justify-center">
+      <div className="z-40 absolute h-[600px] w-[600px] flex items-center justify-center">
         {/* Hour hand */}
         <div
-          className="absolute w-2 h-[150px] bg-black origin-bottom top-36"
+          className="absolute w-2 h-[150px] bg-white origin-bottom top-36"
           style={{ transform: `rotate(${hourDeg}deg)` }}
         ></div>
         {/* Minute hand */}
         <div
-          className="absolute w-2 h-[200px] bg-black origin-bottom top-24  "
+          className="absolute w-2 h-[200px] bg-white origin-bottom top-24  "
           style={{ transform: `rotate(${minuteDeg}deg)` }}
         ></div>
         {/* Second hand */}
         <div
-          className="absolute w-1 h-[250px] bg-red-500 origin-bottom top-10"
+          className="absolute w-1 h-[250px] bg-white origin-bottom top-10"
           style={{ transform: `rotate(${secondDeg}deg)` }}
         ></div>
 
@@ -50,7 +50,8 @@ export default function Watch() {
           <div className="text-white flex flex-col items-center justify-center gap-5">
             <div className="text-2xl">YENİ WEB SİTEMİZ</div>
             <div className="text-8xl text-wrap text-center">
-              ÇOK <br></br> YAKINDA{" "}
+              ÇOK <br></br>
+              <br></br> YAKINDA{" "}
             </div>
             <div className="text-2xl">TAKİPTE KALIN!</div>
           </div>
