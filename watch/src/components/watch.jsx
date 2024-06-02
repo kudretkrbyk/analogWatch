@@ -15,7 +15,7 @@ export default function Watch() {
   const hourDeg = (time.getHours() % 12) * 30 + time.getMinutes() * 0.5;
 
   return (
-    <div className="z-43 flex items-center justify-center relative w-full h-screen ">
+    <div className="z-40 flex items-center justify-center relative w-full h-screen overflow-hidden">
       <div className="z-30 w-full h-screen fixed">
         {" "}
         <video
@@ -56,11 +56,17 @@ export default function Watch() {
             <div className="text-2xl">TAKİPTE KALIN!</div>
           </div>
           {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-12 bg-white"
-              style={{ transform: `rotate(${i * 30}deg) translateY(-250px)` }}
-            ></div>
+            <div key={i} className="absolute z-50">
+              {" "}
+              <div
+                className=" w-1 h-12 bg-white visible md:hidden  "
+                style={{ transform: `rotate(${i * 30}deg) translateY(-200px)` }}
+              ></div>{" "}
+              <div
+                className=" w-1 h-12 bg-white absolute hidden md:inline "
+                style={{ transform: `rotate(${i * 30}deg) translateY(-30ch)` }}
+              ></div>{" "}
+            </div>
           ))}
         </div>
       </div>
