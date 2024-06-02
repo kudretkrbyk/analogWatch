@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoIosArrowRoundDown } from "react-icons/io";
 
 export default function Watch() {
   const [time, setTime] = useState(new Date());
@@ -13,6 +14,13 @@ export default function Watch() {
   const secondDeg = time.getSeconds() * 6;
   const minuteDeg = time.getMinutes() * 6 + time.getSeconds() * 0.1;
   const hourDeg = (time.getHours() % 12) * 30 + time.getMinutes() * 0.5;
+
+  const handleScroll = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="z-40 flex items-center justify-center relative w-full h-screen overflow-hidden">
@@ -68,6 +76,12 @@ export default function Watch() {
               ></div>{" "}
             </div>
           ))}
+          <div className="border border-white fixed bottom-10">
+            <IoIosArrowRoundDown
+              className="text-white size-10"
+              onClick={handleScroll}
+            />
+          </div>
         </div>
       </div>
     </div>

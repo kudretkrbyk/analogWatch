@@ -11,7 +11,7 @@ export default function Skyline() {
     });
   }
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center gap-12 p-6 overflow-hidden">
+    <div className="relative w-full h-screen flex flex-col items-center justify-center gap-10 p-6 overflow-hidden">
       <div className="z-40 bg-gradient-to-b from-transparent from-10% to-white to-40% w-full h-screen absolute"></div>
       <div className="z-40 text-2xl font-bold">SKYLINE</div>
       <div className="z-40 w-full md:w-1/3 text-center">
