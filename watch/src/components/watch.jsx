@@ -57,7 +57,7 @@ export default function Watch() {
         <div className="absolute w-[600px] h-[600px] flex items-center justify-center">
           <div className="text-white flex flex-col items-center justify-center gap-5">
             <div className="text-2xl">YENİ WEB SİTEMİZ</div>
-            <div className="text-8xl text-wrap text-center">
+            <div className="text-5xl md:text-6xl xl:text-8xl text-wrap text-center">
               ÇOK <br></br>
               <br></br> YAKINDA{" "}
             </div>
@@ -76,7 +76,7 @@ export default function Watch() {
               ></div>{" "}
             </div>
           ))}
-          <div className="border border-white fixed bottom-10">
+          <div className="border border-white fixed bottom-1">
             <IoIosArrowRoundDown
               className="text-white size-10"
               onClick={handleScroll}
