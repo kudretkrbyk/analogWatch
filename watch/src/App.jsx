@@ -5,12 +5,12 @@ import Skyline from "./components/Skyline";
 
 function App() {
   return (
-    <>
+    <div>
       {" "}
       <Navbar></Navbar>
       <Watch></Watch> <Icons></Icons>
       <Skyline></Skyline>
-    </>
+    </div>
   );
 }
 

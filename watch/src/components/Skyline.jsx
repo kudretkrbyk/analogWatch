@@ -48,12 +48,14 @@ export default function Skyline() {
 
       {/* mobile view*/}
       <div className="flex md:hidden flex-col z-40 items-center justify-center gap-3   bottom-0 p-5  w-full ">
-        <div className="flex  gap-4">
+        <div className="flex items-center justify-center  gap-4">
           {" "}
           <div>Gizlilik Politikas</div>
           <div>Çerez Politikası</div>
         </div>
-        <div>© 2035, Skyline. Wix.com ile oluşturuldu. </div>
+        <div className="text-nowrap">
+          © 2035, Skyline. Wix.com ile oluşturuldu.{" "}
+        </div>
         <div>
           <BsArrowUpSquareFill
             className="text-[#0e2e47] size-10"

@@ -24,7 +24,7 @@ export default function Watch() {
 
   return (
     <div className="z-40 flex items-center justify-center relative w-full h-screen overflow-hidden">
-      <div className="z-30 w-full h-full fixed border border-red-500">
+      <div className="z-30 w-full h-full fixed">
         {" "}
         <video
           className="z-20 absolute   w-full h-screen object-cover object-center"
@@ -36,7 +36,7 @@ export default function Watch() {
         <div className="z-40 absolute h-screen opacity-40 w-full bg-gray-500"></div>
       </div>
 
-      <div className="z-40 absolute h-[500px] w-[500px] flex items-center justify-center border border-white">
+      <div className="z-40 absolute h-[500px] w-[500px] flex items-center justify-center ">
         {/* Hour hand */}
         <div
           className="absolute w-2 h-[100px] md:h-[150px] bg-white origin-bottom top-48 md:top-36"
