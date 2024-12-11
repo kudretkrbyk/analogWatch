@@ -24,7 +24,7 @@ export default function Watch() {
 
   return (
     <div className="z-40 flex items-center justify-center relative w-full h-screen overflow-hidden">
-      <div className="z-30 w-full h-screen fixed">
+      <div className="z-30 w-full h-full fixed border border-red-500">
         {" "}
         <video
           className="z-20 absolute   w-full h-screen object-cover object-center"
@@ -36,15 +36,15 @@ export default function Watch() {
         <div className="z-40 absolute h-screen opacity-40 w-full bg-gray-500"></div>
       </div>
 
-      <div className="z-40 absolute h-[600px] w-[600px] flex items-center justify-center">
+      <div className="z-40 absolute h-[500px] w-[500px] flex items-center justify-center border border-white">
         {/* Hour hand */}
         <div
-          className="absolute w-2 h-[150px] bg-white origin-bottom top-36"
+          className="absolute w-2 h-[100px] md:h-[150px] bg-white origin-bottom top-48 md:top-36"
           style={{ transform: `rotate(${hourDeg}deg)` }}
         ></div>
         {/* Minute hand */}
         <div
-          className="absolute w-2 h-[200px] bg-white origin-bottom top-24  "
+          className="absolute w-2 h-[150px] md:h-[200px] bg-white origin-bottom top-36 md:top-24  "
           style={{ transform: `rotate(${minuteDeg}deg)` }}
         ></div>
         {/* Second hand */}
@@ -57,7 +57,7 @@ export default function Watch() {
         <div className="absolute w-[600px] h-[600px] flex items-center justify-center">
           <div className="text-white flex flex-col items-center justify-center gap-5">
             <div className="text-2xl">YENİ WEB SİTEMİZ</div>
-            <div className="text-5xl md:text-6xl xl:text-8xl text-wrap text-center">
+            <div className="text-2xl md:text-6xl xl:text-8xl text-wrap text-center">
               ÇOK <br></br>
               <br></br> YAKINDA{" "}
             </div>
@@ -68,7 +68,7 @@ export default function Watch() {
               {" "}
               <div
                 className=" w-1 h-12 bg-white visible md:hidden  "
-                style={{ transform: `rotate(${i * 30}deg) translateY(-200px)` }}
+                style={{ transform: `rotate(${i * 30}deg) translateY(-150px)` }}
               ></div>{" "}
               <div
                 className=" w-1 h-12 bg-white absolute hidden md:inline "
